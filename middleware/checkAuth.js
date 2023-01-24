@@ -9,6 +9,7 @@ module.exports = (req, res, next) => {
     if (verify.usertype == "admin") {
       next();
     } else {
+      console.log("hi");
       return res.status(401).json({
         msg: "not admin",
       });
